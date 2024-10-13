@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
   <script src="main.js"></script>
+  <script src="phoneinput.js"></script>
 </head>
 
 <body>
@@ -114,42 +115,42 @@
       </div>
       <ul class="services__grid">
         <li>
-          <img src="/cube.png" alt="">
+          <img aria-hidden="true" src="/cube.png" alt="">
           <h3>Product Management</h3>
           <p>vacancy available 20</p>
         </li>
         <li>
-          <img src="/cube.png" alt="">
+          <img aria-hidden="true" src="/cube.png" alt="">
           <h3>Product Management</h3>
           <p>vacancy available 20</p>
         </li>
         <li>
-          <img src="/cube.png" alt="">
+          <img aria-hidden="true" src="/cube.png" alt="">
           <h3>Product Management</h3>
           <p>vacancy available 20</p>
         </li>
         <li>
-          <img src="/cube.png" alt="">
+          <img aria-hidden="true" src="/cube.png" alt="">
           <h3>Product Management</h3>
           <p>vacancy available 20</p>
         </li>
         <li>
-          <img src="/cube.png" alt="">
+          <img aria-hidden="true" src="/cube.png" alt="">
           <h3>Product Management</h3>
           <p>vacancy available 20</p>
         </li>
         <li>
-          <img src="/cube.png" alt="">
+          <img aria-hidden="true" src="/cube.png" alt="">
           <h3>Product Management</h3>
           <p>vacancy available 20</p>
         </li>
         <li>
-          <img src="/cube.png" alt="">
+          <img aria-hidden="true" src="/cube.png" alt="">
           <h3>Product Management</h3>
           <p>vacancy available 20</p>
         </li>
         <li>
-          <img src="/cube.png" alt="">
+          <img aria-hidden="true" src="/cube.png" alt="">
           <h3>Product Management</h3>
           <p>vacancy available 20</p>
         </li>
@@ -171,39 +172,68 @@
             <h5>Brooklyn Simmons</h5>
             <p>Co-Founder & Chief Executive Officer</p>
             <img style="margin-bottom: 20px;" src="public/stars.png" alt="">
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero dolores culpa saepe quo expedita non,
-              qui magnam, ex voluptate ad voluptates natus quae aliquid praesentium reprehenderit porro, perspiciatis
-              incidunt ipsa?</span>
+            <span> <img aria-hidden="true" style="margin-right: 11px;" src="public/qute.png" alt="">Amet minim mollit
+              non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
+              enim velit mollit. <img aria-hidden="true" style="margin-left: 11px;" src="public/qute2.png"
+                alt=""></span>
           </li>
           <li>
             <img style="margin-bottom: 16px;" src="public/user-icon.png" alt="">
             <h5>Brooklyn Simmons</h5>
             <p>Co-Founder & Chief Executive Officer</p>
             <img style="margin-bottom: 20px;" src="public/stars.png" alt="">
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero dolores culpa saepe quo expedita non,
+            <span> <img aria-hidden="true" style="margin-right: 11px;" src="public/qute.png" alt="">Lorem ipsum dolor
+              sit amet, consectetur adipisicing elit. Vero dolores culpa saepe quo expedita non,
               qui magnam, ex voluptate ad voluptates natus quae aliquid praesentium reprehenderit porro, perspiciatis
-              incidunt ipsa?</span>
+              incidunt ipsa?<img aria-hidden="true" style="margin-left: 11px;" src="public/qute2.png" alt=""></span>
           </li>
           <li>
             <img style="margin-bottom: 16px;" src="public/user-icon.png" alt="">
             <h5>Brooklyn Simmons</h5>
             <p>Co-Founder & Chief Executive Officer</p>
             <img style="margin-bottom: 20px;" src="public/stars.png" alt="">
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero dolores culpa saepe quo expedita non,
+            <span> <img aria-hidden="true" style="margin-right: 11px;" src="public/qute.png" alt="">Lorem ipsum dolor
+              sit amet, consectetur adipisicing elit. Vero dolores culpa saepe quo expedita non,
               qui magnam, ex voluptate ad voluptates natus quae aliquid praesentium reprehenderit porro, perspiciatis
-              incidunt ipsa?</span>
+              incidunt ipsa?<img aria-hidden="true" style="margin-left: 11px;" src="public/qute2.png" alt=""></span>
           </li>
         </ul>
-       
         <div class="slider__dots"></div>
-         <!-- <button class="slider__button slider__button--next">&gt;</button> -->
+        <!-- <button class="slider__button slider__button--next">&gt;</button> -->
       </div>
-
-
-
-
-
-
+    </section>
+    <section class="contacts">
+      <div class="container">
+        <div class="contacts__heading">
+          <span>OUR CONTACTS</span>
+          <h2>Let’s Start Working Together. Get in Touch with Us!</h2>
+          <p style="margin-bottom:24px ;">Get in touch to discuss your employee wellbeing needs today. Please give us a call, drop us an email.</p>
+          <div class="contacts__communication">
+            <img src="public/ci_location.png" alt="">
+            <p>41 Pilgrm Avenue, Chevy Chase, Md 20815</p>
+          </div>
+          <div class="contacts__communication">
+            <img src="public/phone.png" alt="">
+            <p>+01234 567 890</p>
+          </div>
+          <div class="contacts__communication">
+            <img src="public/mail.png" alt="">
+            <p>info@agency.com</p>
+          </div>
+        </div>
+        <form class="contacts__form" action="">
+          <label for="input" class="text">Номер телефона</label>
+          <input type="tel" data-tel-input placeholder="" name="input" class="input" required>
+          <label for="input" class="text">Номер телефона</label>
+          <input type="tel" data-tel-input placeholder="" name="input" class="input" required>
+          <label for="input" class="text">Номер телефона</label>
+          <input type="tel" data-tel-input placeholder="" name="input" class="input" required>
+          <label for="input" class="text">Номер телефона</label>
+          <input type="tel" data-tel-input placeholder="" name="input" class="input" required>
+          <button>Submit</button>
+        </form>
+      </div>
 
 
     </section>
@@ -211,3 +241,10 @@
 </body>
 
 </html>
+
+
+<!-- to do 
+
+valid input + input masks (mail)
+footer 
+adaptiv (nu ili naxui) -->
