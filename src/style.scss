@@ -1,0 +1,234 @@
+@import 'reset.scss';
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
+button {
+	@include button;
+}
+p {
+	@include p;
+}
+button:hover {
+	@include button-hover;
+}
+.container {
+	max-width: 1280px;
+	margin: auto;
+	padding: 0px;
+}
+.header {
+	background-image: url(/BAground.png);
+	background-color: rgb(16, 29, 38);
+	width: 100%;
+	height: 100%;
+	padding: 28px 0px;
+	z-index: -1;
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__nav-list {
+		display: flex;
+	}
+	&__nav-list li {
+		margin-right: 40px;
+		color: rgba(186, 185, 185, 1);
+		transition: all 0.3s;
+		position: relative;
+		overflow: hidden;
+		transition: all 0.3s;
+		cursor: pointer;
+	}
+	&__nav-list li:last-child {
+		margin-right: 0;
+	}
+	&__nav-list li:first-child {
+		color: rgba(255, 255, 255, 1);
+	}
+	&__nav-list li::before {
+		content: '';
+		position: absolute;
+		bottom: -5px;
+		left: 0;
+		width: 0;
+		height: 6px;
+		background-color: rgb(255, 255, 255);
+		transition: all 0.5s;
+	}
+	&__nav-list li:hover::before {
+		width: 100%;
+	}
+	&__user-btns {
+		button {
+			color: white;
+		}
+	}
+	&__user-btns button:first-child {
+		margin-right: 16px;
+	}
+	&__user-btns button:hover {
+		color: $blue;
+	}
+
+	&__main {
+		display: flex;
+		margin-top: 44px;
+		flex-direction: column;
+	}
+
+	&__promo-img {
+		position: relative;
+	}
+	&__stats-img {
+		position: absolute;
+		left: 20px;
+	}
+	&__info {
+		margin-top: 57px;
+		button {
+			background-color: $yellow;
+			color: $blue;
+			border: none;
+		}
+		h1,
+		h4,
+		p {
+			color: $white;
+		}
+	}
+	h1 {
+		@include h1;
+		margin-bottom: 24px;
+	}
+	h4 {
+		@include h4;
+		margin-bottom: 40px;
+	}
+	&__body-btns {
+		display: flex;
+		align-items: center;
+		margin-bottom: 75px;
+	}
+	&__play {
+		display: flex;
+		align-items: center;
+
+		a {
+			font-size: 16px;
+			font-weight: 500;
+		}
+	}
+
+	&__additInf {
+		display: flex;
+		margin-bottom: 148px;
+		&-block {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-right: 32px;
+			h2 {
+				color: $yellow;
+				margin-bottom: 10px;
+			}
+			p {
+				font-weight: 500;
+				font-size: 16px;
+			}
+		}
+		&__additInf div:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.about-us {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 140px;
+
+	background-repeat: no-repeat;
+	&__info {
+		padding: 53.5px 0;
+		max-width: 628px;
+		h2 {
+			color: $blue;
+			margin-bottom: 16px;
+			margin-top: 24px;
+			@include h2;
+			width: fit-content;
+		}
+		span {
+			padding: 10px 16px;
+			background-color: rgba(240, 231, 20, 0.2);
+			border-radius: 12321px;
+		}
+		p {
+			margin-bottom: 40px;
+		}
+		button {
+			background-color: $blue;
+			color: $yellow;
+			span {
+				all: unset;
+			}
+		}
+	}
+}
+
+.services {
+	margin-top: 140px;
+
+	&__heading {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 664px;
+		margin: auto;
+		margin-bottom: 80px;
+
+		span {
+			padding: 10px 16px;
+			background-color: rgba(240, 231, 20, 0.2);
+			border-radius: 12321px;
+			text-transform: uppercase;
+			text-align: center;
+		}
+		p {
+			text-align: center;
+		}
+		h2 {
+			@include h2;
+			text-transform: capitalize;
+			max-width: 495px;
+			text-align: center;
+		}
+	}
+	&__grid {
+		display: grid;
+
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		gap: 30px;
+		li {
+			padding: 32px;
+			width: fit-content;
+			background-color: rgba(255, 255, 255, 1);
+			box-shadow: inset;
+			border-radius: 10px;
+			width: 233px;
+			height: 174px;
+			h3 {
+				@include h3;
+				max-width: 181px;
+				margin: 24px 0px 12px 0px;
+			}
+			p {
+				font-size: 18px;
+				font-weight: 400;
+			}
+		}
+	}
+}
