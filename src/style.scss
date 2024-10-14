@@ -31,7 +31,7 @@ button:hover {
 	&__nav-list {
 		display: flex;
 	}
-	&__nav-list li {
+	&__nav-list a {
 		margin-right: 40px;
 		color: rgba(186, 185, 185, 1);
 		transition: all 0.3s;
@@ -40,13 +40,13 @@ button:hover {
 		transition: all 0.3s;
 		cursor: pointer;
 	}
-	&__nav-list li:last-child {
+	&__nav-list a:last-child {
 		margin-right: 0;
 	}
-	&__nav-list li:first-child {
+	&__nav-list a:first-child {
 		color: rgba(255, 255, 255, 1);
 	}
-	&__nav-list li::before {
+	&__nav-list a::before {
 		content: '';
 		position: absolute;
 		bottom: -5px;
@@ -56,7 +56,7 @@ button:hover {
 		background-color: rgb(255, 255, 255);
 		transition: all 0.5s;
 	}
-	&__nav-list li:hover::before {
+	&__nav-list a:hover::before {
 		width: 100%;
 	}
 	&__user-btns {
@@ -379,7 +379,7 @@ button:hover {
 		h2 {
 			@include h2;
 			text-transform: capitalize;
-			
+
 			text-align: start;
 			color: $blue;
 			margin: 24px 0px 16px 0px;
@@ -405,53 +405,110 @@ button:hover {
 	&__form {
 		display: flex;
 		flex-direction: column;
-		
 
-		input{
+		input {
 			width: 400px;
 		}
-		button{
+		button {
 			width: fit-content;
 			background-color: $yellow;
 			border: none;
 			padding: 13px 60px;
 		}
 	}
+
+	&__input-name {
+		text-transform: capitalize;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		padding: 60px 136px 60px 80px;
+		position: static;
+		width: auto;
+		background-color: $blue;
+		border-radius: 10px;
+	}
+
+	&__form label.text {
+		font-size: 0.75rem;
+		color: rgba(143, 147, 153, 1);
+		font-family: var(--font-tele2);
+		position: relative;
+		top: 0.5rem;
+		margin: 0;
+		padding: 0;
+		background: #e8e8e800;
+		width: fit-content;
+	}
+
+	&__form input.input {
+		padding: 10px 0px 5px 0px;
+		font-size: 16px;
+		border: none;
+		border-bottom: 2px rgba(143, 147, 153, 1) solid;
+		border-radius: 0px;
+		background: #e8e8e800;
+		margin-bottom: 24px;
+	}
+
+	&__form input.input:focus {
+		outline: none;
+	}
 }
 
-
-.contacts__form {
-	display: flex;
-	flex-direction: column;
-	padding: 60px 136px 60px 80px ;
-	position: static;
-	width: auto;
+.footer {
 	background-color: $blue;
-	border-radius: 10px;
-}
+	padding-bottom: 57px;
+	&__block {
+		padding-top: 78px;
+		padding-bottom: 63px;
+		border-bottom: 1px $grey solid;
+		display: flex;
+		justify-content: space-between;
+	}
 
-.contacts__form label.text {
-	font-size: 0.75rem;
-	color: rgba(143, 147, 153, 1);
-	font-family: var(--font-tele2);
-	position: relative;
-	top: 0.5rem;
-	margin: 0;
-	padding: 0;
-	background: #e8e8e800;
-	width: fit-content;
-}
+	li {
+		margin-bottom: 20px;
+	}
+	&__list-first li:last-child {
+		margin-bottom: 0px;
+	}
 
-.contacts__form input[type='tel'].input {
-	padding: 10px 0px 5px 0px;
-	font-size: 16px;
-	border: none;
-	border-bottom: 2px rgba(143, 147, 153, 1) solid;
-	border-radius: 0px;
-	background: #e8e8e800;
-	margin-bottom: 24px;
-}
+	&__list-first {
+		p {
+			max-width: 329px;
+			color: $grey;
+			font-size: 16px;
+			font-weight: 500;
+		}
+	}
 
-.contacts__form input[type='tel'].input:focus {
-	outline: none;
+	&__list-second {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		h4 {
+			margin-bottom: 24px;
+		}
+		p {
+			color: $grey;
+			max-width: 121px;
+			font-size: 16px;
+			font-weight: 500;
+		}
+	}
+	&__list-last {
+		h4 {
+			margin-bottom: 24px;
+		}
+		p {
+			color: $grey;
+
+			font-size: 16px;
+			font-weight: 500;
+		}
+	}
 }

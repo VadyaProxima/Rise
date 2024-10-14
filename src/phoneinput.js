@@ -1,10 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 	const phoneInputs = document.querySelectorAll('input[data-tel-input]')
-	const phoneForm = document.getElementById('phoneForm')
-	const checkedText = document.querySelector('.checked_text')
 
-	// Пример ранее высланных промокодов для валидации
-	const sentPromoCodes = new Set()
 
 	const getInputNumbersValue = input => input.value.replace(/\D/g, '')
 
@@ -91,23 +87,4 @@ document.addEventListener('DOMContentLoaded', function () {
 		phoneInput.addEventListener('paste', onPhonePaste, false)
 	}
 
-	document.querySelector('.button').addEventListener('click', function (e) {
-		e.preventDefault()
-		const phoneInput = phoneForm.querySelector('input[data-tel-input]')
-		const phoneNumber = phoneInput.value
-
-		if (validatePhoneNumber(phoneNumber)) {
-			if (sentPromoCodes.has(phoneNumber)) {
-				checkedText.textContent = 'На этот номер уже выслан промокод'
-				checkedText.style.color = 'red'
-			} else {
-				sentPromoCodes.add(phoneNumber)
-				checkedText.textContent = 'Промокод выслан на ваш номер'
-				checkedText.style.color = 'green' // Добавлено это для цвета
-			}
-		} else {
-			checkedText.textContent = 'Ошибка ввода номера телефона'
-			checkedText.style.color = 'red'
-		}
-	})
 })
